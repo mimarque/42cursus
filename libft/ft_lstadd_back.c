@@ -9,7 +9,9 @@ void ft_lstadd_back(t_list **lst, t_list *new){
 	{
 		current = ft_lstlast(*lst);
 		current->next = new;
-	} else {
+	} 
+	else
+	{
 		*lst = new;
 	}
 }
