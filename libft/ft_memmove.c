@@ -6,7 +6,7 @@
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 19:20:57 by mimarque          #+#    #+#             */
-/*   Updated: 2021/10/28 19:21:00 by mimarque         ###   ########.fr       */
+/*   Updated: 2021/10/31 16:53:44 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,20 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*d;
 	const char	*s;
-	const char	*lasts;
-	char		*lastd;
+	char		*lastd; 
+	char		*lastd; 
 
 	d = dest;
 	s = src;
 	if (d < s)
-		while (n-- != 0)
+		while (len--)
 			*d++ = *s++;
 	else
 	{
-		lasts = s + (n - 1);
-		lastd = d + (n - 1);
-		while (n-- != 0)
+		char *lasts = s + (len-1);
+		char *lastd = d + (len-1);
+		while (len--)
 			*lastd-- = *lasts--;
 	}
-	return (dest);
+	return dest;
 }*/

@@ -6,7 +6,7 @@
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 19:24:15 by mimarque          #+#    #+#             */
-/*   Updated: 2021/10/29 00:42:10 by mimarque         ###   ########.fr       */
+/*   Updated: 2021/10/31 16:45:55 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -23,7 +24,9 @@ typedef struct s_list
 }	t_list;
 
 /* Part I */
+int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -36,9 +39,11 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s);
 size_t	ft_strlcpy(char *destination, const char *source, size_t size);
 size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
