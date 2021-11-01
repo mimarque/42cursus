@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/31 16:34:24 by mimarque          #+#    #+#             */
-/*   Updated: 2021/11/01 18:47:11 by mimarque         ###   ########.fr       */
+/*   Created: 2021/11/01 23:43:35 by mimarque          #+#    #+#             */
+/*   Updated: 2021/11/01 23:47:13 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	void	*ptr;
+	char	*str;
+	int		i;
 
-	if (nmemb == 0 || size == 0)
+	if (!s || !f)
+		return (NULL);
+	i = 0;
+	str = ft_strdup(s);
+	if (!str)
+		return (NULL);
+	while (str[i])
 	{
-		nmemb = 1;
-		size = 1;
+		str[i] = f(i, str[i]);
+		i++;
 	}
-	ptr = malloc(nmemb * size);
-	if (ptr)
-		ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	return (str);
 }

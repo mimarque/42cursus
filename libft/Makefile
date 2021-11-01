@@ -6,7 +6,7 @@
 #    By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/28 18:26:42 by mimarque          #+#    #+#              #
-#    Updated: 2021/10/31 16:45:52 by mimarque         ###   ########.fr        #
+#    Updated: 2021/11/01 23:28:57 by mimarque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC_FILES=	ft_atoi.c		\
 			ft_isascii.c	\
 			ft_isdigit.c	\
 			ft_isprint.c	\
+			ft_itoa.c		\
 			ft_memccpy.c	\
 			ft_memchr.c		\
 			ft_memcmp.c		\
@@ -40,12 +41,16 @@ SRC_FILES=	ft_atoi.c		\
 			ft_memset.c		\
 			ft_strchr.c		\
 			ft_strdup.c		\
+			ft_strjoin.c	\
 			ft_strlcat.c	\
 			ft_strlcpy.c	\
 			ft_strlen.c		\
+			ft_strmapi.c	\
 			ft_strncmp.c	\
 			ft_strnstr.c	\
 			ft_strrchr.c	\
+			ft_strtrim.c	\
+			ft_substr.c		\
 			ft_tolower.c	\
 			ft_toupper.c	
 
