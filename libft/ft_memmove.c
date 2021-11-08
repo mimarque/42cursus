@@ -6,7 +6,7 @@
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 19:20:57 by mimarque          #+#    #+#             */
-/*   Updated: 2021/11/01 00:33:45 by mimarque         ###   ########.fr       */
+/*   Updated: 2021/11/08 13:26:21 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,18 @@
 	then either copy from the beguining or the end */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*tmp;
-	char	*dst;
+	unsigned char		*cs1;
+	const unsigned char	*cs2;
 
-	tmp = (char *)src;
-	dst = (char *)dest;
-	if (tmp < dst)
-	{
-		while (n--)
-			dst[n] = tmp[n];
-	}
-	else
-		ft_memcpy(dst, tmp, n);
-	return (dst);
+	if (dest < src)
+		return (ft_memcpy(dest, src, n));
+	if (!n || (dest == src))
+		return (dest);
+	cs1 = (unsigned char *)dest;
+	cs2 = (const unsigned char *)src;
+	while (n--)
+		cs1[n] = cs2[n];
+	return (dest);
 }
 
 /*void	*ft_memmove(void *dest, const void *src, size_t n)

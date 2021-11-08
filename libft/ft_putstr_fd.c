@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 18:42:47 by mimarque          #+#    #+#             */
-/*   Updated: 2021/11/01 21:11:37 by mimarque         ###   ########.fr       */
+/*   Created: 2021/11/03 12:40:28 by mimarque          #+#    #+#             */
+/*   Updated: 2021/11/03 12:42:58 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int	main(void)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int	a;
-	int	b;
-	int	c;
-
-	a = -2000;
-	b = -2345;
-	c = 12345;
-	printf("%d %s", a, ft_itoa(a));
-	printf("%d %s", b, ft_itoa(b));
-	printf("%d %s", c, ft_itoa(c));
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
