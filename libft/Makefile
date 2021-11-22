@@ -6,7 +6,7 @@
 #    By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/28 18:26:42 by mimarque          #+#    #+#              #
-#    Updated: 2021/11/06 23:13:20 by mimarque         ###   ########.fr        #
+#    Updated: 2021/11/09 15:49:03 by mimarque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,7 +88,7 @@ HDR= $(addprefix $(HDR_DIR),$(HDR_NAME))
 
 all: $(NAME)
 
-$(NAME): $(OBJ_DIR) $(SRC_NAMES)
+$(NAME): $(OBJ_DIR) $(SRC_NAMES) $(BONUS_NAMES)
 	ar -rc $@ $(SRC_NAMES_O)
 	ranlib $@
 
@@ -100,7 +100,7 @@ $(OBJ_DIR):
 
 bonus: 
 	ar -r $(NAME) $(BONUS_NAMES_O)
-	ranlib $@
+	ranlib $(NAME)
 
 clean:
 	rm -rf $(OBJ_DIR)

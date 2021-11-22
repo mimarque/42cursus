@@ -6,7 +6,7 @@
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:26:59 by mimarque          #+#    #+#             */
-/*   Updated: 2021/10/29 16:56:44 by mimarque         ###   ########.fr       */
+/*   Updated: 2021/11/09 16:10:25 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,21 @@
 	return(s - source - 1);
 }*/
 
-size_t	ft_strlcpy(char *destination, const char *source, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
 	i = 0;
-	if (!size)
-		return (ft_strlen(source));
-	while (source[i] != '\0' && i < size)
+	if (!dstsize)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < dstsize)
 	{
-		destination[i] = source[i];
+		dst[i] = src[i];
 		i++;
 	}
-	if (size < ft_strlen(source))
-		destination[size - 1] = '\0';
+	if (dstsize < ft_strlen(src))
+		dst[dstsize - 1] = '\0';
 	else
-		destination[i] = '\0';
-	return (ft_strlen(source));
+		dst[i] = '\0';
+	return (ft_strlen(src));
 }

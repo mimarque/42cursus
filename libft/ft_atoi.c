@@ -18,28 +18,28 @@ static int	ft_isspace(int c)
 			|| c == '\v'));
 }
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
 	long	sum;
 	long	s;
 
 	sum = 0;
 	s = 1;
-	while (ft_isspace(*nptr))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
-		if (*nptr++ == '-')
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
+		if (*str++ == '-')
 			s = -1;
-	if (!ft_isdigit(*nptr))
+	if (!ft_isdigit(*str))
 		return (0);
-	while (*nptr && ft_isdigit(*nptr))
+	while (*str && ft_isdigit(*str))
 	{
 		if (sum * s > INT_MAX)
 			return (-1);
 		else if (sum * s < INT_MIN)
 			return (0);
-		sum = sum * 10 + *nptr - '0';
-		nptr++;
+		sum = sum * 10 + *str - '0';
+		str++;
 	}
 	return ((int)(sum * s));
 }

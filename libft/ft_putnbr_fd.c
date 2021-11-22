@@ -23,6 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('0', fd);
 	else
 	{
+		pow = 0;
 		if (n < 0)
 		{
 			ft_putchar_fd('-', fd);
