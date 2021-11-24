@@ -6,7 +6,7 @@
 /*   By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:43:20 by mimarque          #+#    #+#             */
-/*   Updated: 2021/11/04 19:29:10 by mimarque         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:26:48 by mimarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	arr = calloc((count(s, c) + 1), sizeof(arr));
+	arr = ft_calloc((count(s, c) + 1), sizeof(arr));
 	if (!arr)
 		return (NULL);
 	j = 0;

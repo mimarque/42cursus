@@ -6,7 +6,7 @@
 #    By: mimarque <mimarque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/28 18:26:42 by mimarque          #+#    #+#              #
-#    Updated: 2021/11/09 15:49:03 by mimarque         ###   ########.fr        #
+#    Updated: 2021/11/24 17:20:57 by mimarque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,7 +113,7 @@ sclean: clean
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: sclean all
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC_FILES) $(BONUS_FILES)
